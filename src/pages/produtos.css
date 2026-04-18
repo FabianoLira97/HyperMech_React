@@ -1,0 +1,153 @@
+/* GRID */
+.grid-produtos {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.25s;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.06);
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+}
+
+/* OVERLAY */
+.card-overlay-hover {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.25s;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.card:hover .card-overlay-hover {
+  opacity: 1;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 999;
+}
+
+/* BLUR */
+.blur-bg {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.modal-inner {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  max-width: 750px;
+  width: 100%;
+  box-shadow: 0 12px 45px rgba(0,0,0,0.25);
+}
+
+/* CARROSSEL */
+.carousel-container {
+  text-align: center;
+}
+
+.carousel-img {
+  width: 280px;
+  max-width: 90%;
+  border-radius: 12px;
+  transition: transform 0.35s ease;
+  animation: fadeSlide 0.45s ease;
+}
+
+.carousel-img:hover {
+  transform: scale(1.08);
+}
+
+/* SLIDE ANIMATION */
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* MINIATURAS */
+.thumbs-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.thumb {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.25s;
+  padding: 3px;
+  background: #f7f7f7;
+}
+
+.thumb:hover {
+  transform: scale(1.07);
+}
+
+.thumb.active {
+  border-color: var(--primary);
+  transform: scale(1.1);
+}
+
+/* BOTÕES */
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.btn-primary.mini {
+  padding: 6px 14px;
+  font-size: 19px;
+}
+
+/* DETALHES */
+.modal-details {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.close-btn {
+  width: 100%;
+  margin-top: 26px;
+  padding: 12px;
+  border-radius: 12px;
+}

@@ -1,0 +1,58 @@
+/* ===== GRADIENTE ANIMADO ===== */
+.gradient-animated {
+  background: linear-gradient(135deg, #152046, #1f356e, #203a74);
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== FADE UP ANIMAÇÃO ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeUp 0.9s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* ===== PARALLAX ===== */
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ===== IMAGEM 3D ===== */
+.img-3d {
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.img-3d:hover {
+  transform: perspective(600px) rotateX(8deg) rotateY(-8deg) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* ===== SOMBRAS E BLOCOS ===== */
+.card-block {
+  border-radius: 14px;
+  padding: 40px 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+  }
+  
